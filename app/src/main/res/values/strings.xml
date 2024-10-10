@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AutoTrack</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Sign Up</string>
+    <string name="logout">Logout</string>
+    <string name="speed">Speed</string>
+    <string name="current_speed">Current Speed</string>
+    <string name="location">Location</string>
+    <string name="timestamp">Timestamp</string>
+    <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+    <string name="braking">Braking</string>
+    <string name="acceleration">Acceleration</string>
+    <string name="speed_limits">Speed Limits</string>
+    <string name="potholes">Potholes</string>
+    <string name="confirm_password">Confirm password</string>
+</resources>

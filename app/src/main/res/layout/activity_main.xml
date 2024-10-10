@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/RLStartTracking"
+        android:layout_width="180dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_main_button"
+        android:layout_height="180dp" >
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/ic_icon_car"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <!-- Section for displaying current speed -->
+    <RelativeLayout
+        android:id="@+id/RL_RLCurrentSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        android:background="@drawable/panel"
+        android:layout_above="@id/bottom_divider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/white_border_for_icon">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_icon_location" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_speed"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tvCurrentSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/speed"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Divider above bottom navigation -->
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_above="@id/bottom_navigation"/>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@null"
+        android:background="@color/white" />
+
+    <!-- Logout button for Firebase -->
+    <RelativeLayout
+        android:id="@+id/RL_Logout"
+        android:layout_alignParentEnd="true"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/ic_logout">
+    </RelativeLayout>
+
+</RelativeLayout>
